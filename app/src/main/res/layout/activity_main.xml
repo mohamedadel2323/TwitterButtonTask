@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="drawables"
+            type="java.util.List&lt;Integer&gt;" />
+        <!-- "&lt -> lower than" / "&gt -> greater than" -->
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageButton
+            android:id="@+id/one"
+            image_loader="@{drawables.get(0)}"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:background="@color/transparent"
+            android:contentDescription="@string/twitter_button"
+            android:foreground="@drawable/button_back"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/two"
+            image_loader="@{drawables.get(1)}"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/twitter_button"
+            android:foreground="@drawable/button_back"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/one" />
+
+        <ImageButton
+            android:id="@+id/three"
+            image_loader="@{drawables.get(2)}"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/twitter_button"
+            android:foreground="@drawable/button_back"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/two" />
+
+        <ImageButton
+            android:id="@+id/four"
+            image_loader="@{drawables.get(3)}"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:contentDescription="@string/twitter_button"
+            android:foreground="@drawable/button_back"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/three" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
